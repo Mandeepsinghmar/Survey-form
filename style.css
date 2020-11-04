@@ -1,0 +1,125 @@
+/* universal css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+}
+
+/* main css */
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--color-white);
+    font-size: 1rem;
+}
+body::before{
+    content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://raw.githubusercontent.com/lasjorg/fcc-form-example-image/master/67103817-7c51e200-f18b-11e9-975f-f74561336a9a-lj.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#container{
+    margin:3.125rem auto 0 auto;
+    width: 100%;
+}
+#title{
+    color: var(--color-white);
+    margin-top: 60px;
+    text-align: center;
+}
+#description{
+    font-style:italic;
+    font-weight: 200;
+    text-align: center;
+    text-shadow:1px 1px 1px rgba(0, 0, 0, 0.4);
+    font-size: 1.125rem;
+    margin-top: 0;
+}
+
+#survey-form{
+    background-color:var(--color-darkblue-alpha);
+     border-radius: 5px;
+     padding: 2.5rem;
+    }
+    label{
+         display: flex;
+        align-items: center;
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+    .form-input{
+        display: block;
+        padding:0.3rem 0.7rem;
+        border-radius: 5px;
+        width: 100%;
+        height: 2.375rem;
+        color: #495057;
+        border: 1px solid #75b0eb;
+        background-color: #fff;
+    }
+    input,select,textarea{
+     margin: 0;
+     font-size: inherit;
+     font-family: inherit;
+     line-height: inherit;
+    }
+    .form-item{
+        margin:0 auto 20px auto;
+        padding: 0.25rem;
+    }
+    p{
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+    .check{
+        font-size: 0.9rem;
+        color: #e4e4e4;
+        margin-left: 0.25rem;;
+    }
+    .textarea{
+        width: 100%;
+        min-height: 120px;
+        height: 120px;
+        resize: vertical;
+        padding:0.625rem;
+    }
+.submit{
+    width: 100%;
+    padding:0.75rem;
+    background: var(--color-green);
+    color:inherit ;
+    border-radius: 2px;
+    cursor: pointer;
+    border: none;
+    font-size: inherit;
+}
+
+@media screen and (min-width:768px){
+   #container{
+       max-width: 720px;
+   }
+}
